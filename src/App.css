@@ -50,3 +50,15 @@ input[type="text"] {
     column-gap: 7.5px;
     width: 20rem;
 }
+
+.single-movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}

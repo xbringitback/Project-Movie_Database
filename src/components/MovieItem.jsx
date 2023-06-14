@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 const MovieItem = (props) => {
     return (
     <div className="movie">
@@ -7,6 +9,9 @@ const MovieItem = (props) => {
         <h2>{props.duration}</h2>
         <h2>{props.rate}</h2>
         {/* <p>{props.genre}</p> */}
+        <Link to={`/MovieDetail/${props.title}`}><button>Go to Movie</button></Link>
+
+
         <div className="genre">
             {props.genre.map((el, i) => {
                 return (

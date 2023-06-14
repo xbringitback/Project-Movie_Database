@@ -1,6 +1,7 @@
 import Data from './Data'
 import MovieItem from './MovieItem'
 import {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 const MovieList = () => {
     const [dataFilter, setDataFilter] = useState(Data);
@@ -88,14 +89,14 @@ const MovieList = () => {
             </div>
             <div>
                 <input type="text" value={searchGenre} onChange={handleSearchGenre} placeholder='Nach Genre filtern' />
-                <button onClick={handleFilter}>Filter Genre</button>
+                {/* <button onClick={handleFilter}>Filter Genre</button> */}
             </div>
         </article>
 
         <article className='movie-container'>
             {dataFilter.map((el, i) => {
                 return (
-                    <MovieItem 
+                        <MovieItem 
                         key={i}
                         title={el.title}
                         year={el.year}
@@ -103,7 +104,7 @@ const MovieList = () => {
                         duration={el.duration}
                         genre={el.genre}
                         rate={el.rate}
-                    />
+                        />
                 )
             })}
         </article> 
